@@ -1,0 +1,257 @@
+.email-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 2rem;
+}
+
+.header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.compose-section, .reply-section {
+  flex: 1;
+}
+
+.compose-section h2, .reply-section h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.section-description {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.input-section, .tone-section {
+  margin-bottom: 2rem;
+}
+
+.input-section h3, .tone-section h3 {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input-hint {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.email-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.email-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  background-color: white;
+}
+
+.tone-selector {
+  display: inline-block;
+}
+
+.tone-dropdown {
+  padding: 0.75rem 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.tone-dropdown:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.generate-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2980b9, #2471a3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.generate-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.divider {
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #bdc3c7, transparent);
+  margin: 0 1rem;
+}
+
+.reply-content {
+  background: #f8f9fa;
+  border: 2px dashed #bdc3c7;
+  border-radius: 8px;
+  padding: 2rem;
+  min-height: 200px;
+  transition: all 0.3s ease;
+}
+
+.reply-content.empty {
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reply-text {
+  white-space: pre-wrap;
+  line-height: 1.8;
+  color: #2c3e50;
+}
+
+.empty-state {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.empty-state p {
+  margin: 0.5rem 0;
+}
+
+.empty-hint {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.error-message {
+  background: #e74c3c;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 2px;
+    margin: 1rem 0;
+  }
+  
+  .email-form {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Copy to Clipboard Section */
+.copy-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.copy-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.copy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.copy-btn.copied {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  transform: scale(0.98);
+}
+
+.copy-btn:active {
+  transform: scale(0.98);
+}
+
+.copy-error {
+  display: block;
+  color: #e53e3e;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments for copy button */
+@media (max-width: 768px) {
+  .copy-btn {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
